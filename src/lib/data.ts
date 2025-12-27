@@ -9,7 +9,7 @@ import {
 
 export const personalInfo = {
   name: "Abhay Pratap Singh",
-  title: "Full-Stack AI Developer • ML Engineer",
+  title: "Full-Stack AI Developer • Data Scientist • ML Engineer",
   tagline: "Building production-grade LLM systems, ML pipelines, and scalable full-stack applications that drive real business impact",
   email: "abhaypratapsingh722@gmail.com",
   phone: "+91 8660823189",
@@ -21,7 +21,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  summary: `AI/ML Engineer and Full-Stack Developer with 2+ years of experience building production LLM systems, ML pipelines, and enterprise-grade applications. 
+  summary: `Full-Stack AI Developer and AI/ML Engineer with 2+ years of experience building production LLM systems, ML pipelines, and enterprise-grade applications. 
   At Mahindra AI, I architect end-to-end solutions—from data extraction and model development to deployment and scaling—delivering INR 9+ Cr in projected annual savings. 
   I thrive at the intersection of Data Science, Machine Learning, and Software Engineering, turning complex data problems into shipped products that scale.`,
   highlights: [
@@ -38,7 +38,7 @@ export const techStack = {
   languages: {
     title: "Languages",
     icon: Code2,
-    items: ["Python", "TypeScript", "JavaScript", "Java", "SQL", "Bash", "R"],
+    items: ["Python", "JavaScript", "Java", "TypeScript", "SQL", "Bash"],
   },
   aiml: {
     title: "AI/ML & Data Science",

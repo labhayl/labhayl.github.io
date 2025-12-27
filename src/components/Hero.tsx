@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="container-custom pt-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Status badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -30,7 +30,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
             </span>
             Open to opportunities
-          </motion.div>
+          </motion.div> */}
 
           {/* Name */}
           <motion.h1

@@ -133,7 +133,7 @@ export default function Contact() {
           </motion.div>
 
           {/* Availability Status */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -146,7 +146,7 @@ export default function Contact() {
               </span>
               Available for new opportunities
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
