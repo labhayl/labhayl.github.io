@@ -85,7 +85,7 @@ export default function Contact() {
             
             <p className="text-zinc-600 dark:text-zinc-400 mb-8 max-w-md mx-auto">
               Whether you have a project in mind, want to discuss opportunities, 
-              or just want to say hello—I&apos;d love to hear from you.
+              or just want to say hello-I&apos;d love to hear from you.
             </p>
 
             <a
