@@ -10,6 +10,8 @@ import {
   Mic,
   Target,
   Medal,
+  School,
+  BookOpen,
 } from "lucide-react";
 import { education, certifications, achievements } from "@/lib/data";
 
@@ -50,20 +52,43 @@ export default function Education() {
               </h3>
             </div>
 
-            {education.map((edu, index) => (
-              <div key={index} className="card card-hover p-6">
-                <h4 className="font-semibold text-zinc-900 dark:text-white mb-1">
-                  {edu.institution}
-                </h4>
-                <p className="text-zinc-600 dark:text-zinc-400 mb-2">
-                  {edu.degree}
-                </p>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-zinc-500">{edu.period}</span>
-                  <span className="font-mono text-accent-500">{edu.grade}</span>
-                </div>
-              </div>
-            ))}
+            <div className="space-y-4">
+              {education.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
+                  className="card card-hover p-5"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 shrink-0">
+                      {edu.type === "university" ? (
+                        <GraduationCap className="w-4 h-4 text-accent-500" />
+                      ) : (
+                        <School className="w-4 h-4 text-accent-500" />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-zinc-900 dark:text-white text-sm leading-tight">
+                        {edu.institution}
+                      </h4>
+                      <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">
+                        {edu.degree}
+                      </p>
+                      <div className="flex items-center justify-between mt-2 text-xs">
+                        <span className="text-zinc-500">{edu.period}</span>
+                        {edu.grade && (
+                          <span className="font-mono text-accent-500 font-medium">
+                            {edu.grade}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Certifications */}
@@ -83,8 +108,11 @@ export default function Education() {
 
             <div className="card p-6 space-y-4">
               {certifications.map((cert, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.2, delay: 0.3 + index * 0.05 }}
                   className="flex items-start gap-3 pb-4 last:pb-0 border-b border-zinc-100 dark:border-zinc-800 last:border-0"
                 >
                   <div className="mt-1 w-2 h-2 rounded-full bg-accent-500 shrink-0" />
@@ -92,11 +120,11 @@ export default function Education() {
                     <p className="font-medium text-zinc-900 dark:text-white text-sm">
                       {cert.name}
                     </p>
-                    <p className="text-xs text-zinc-500">
+                    <p className="text-xs text-zinc-500 mt-0.5">
                       {cert.issuer} • {cert.credential}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -118,11 +146,19 @@ export default function Education() {
 
             <div className="space-y-4">
               {achievements.map((achievement, index) => (
-                <div key={index} className="card card-hover p-4">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
+                  className="card card-hover p-4"
+                >
                   <div className="flex items-start gap-3">
-                    {index === 0 && <Mic className="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />}
-                    {index === 1 && <Target className="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />}
-                    {index === 2 && <Medal className="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />}
+                    <div className="p-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 shrink-0">
+                      {index === 0 && <Mic className="w-4 h-4 text-accent-500" />}
+                      {index === 1 && <Target className="w-4 h-4 text-accent-500" />}
+                      {index === 2 && <Medal className="w-4 h-4 text-accent-500" />}
+                    </div>
                     <div>
                       <p className="font-medium text-zinc-900 dark:text-white text-sm">
                         {achievement.title}
@@ -135,7 +171,7 @@ export default function Education() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>

@@ -9,7 +9,7 @@ import {
 
 export const personalInfo = {
   name: "Abhay Pratap Singh",
-  title: "Full-Stack AI Developer • Data Scientist • ML Engineer",
+  title: "Full-Stack AI Developer • ML Engineer",
   tagline: "Building production-grade LLM systems, ML pipelines, and scalable full-stack applications that drive real business impact",
   email: "abhaypratapsingh722@gmail.com",
   phone: "+91 8660823189",
@@ -21,11 +21,11 @@ export const personalInfo = {
 };
 
 export const about = {
-  summary: `Full-Stack Developer and AI/ML Engineer with 2+ years of experience building production LLM systems, ML pipelines, and enterprise-grade applications. 
-  At Mahindra AI, I architect end-to-end solutions-from data extraction and model development to deployment and scaling-delivering INR 9+ Cr in projected annual savings. 
+  summary: `AI/ML Engineer and Full-Stack Developer with 2+ years of experience building production LLM systems, ML pipelines, and enterprise-grade applications. 
+  At Mahindra AI, I architect end-to-end solutions—from data extraction and model development to deployment and scaling—delivering INR 9+ Cr in projected annual savings. 
   I thrive at the intersection of Data Science, Machine Learning, and Software Engineering, turning complex data problems into shipped products that scale.`,
   highlights: [
-    "Led development of 4 production AI applications at Mahindra Group",
+    "Led development of 4 production AI/ML applications at Mahindra Group",
     "Built ML pipelines processing 20K+ documents monthly with 94% accuracy",
     "Presented to C-suite executives including Group CTO and AI CEO",
     "Conducted 100+ technical interviews for Data Science & Full-Stack roles",
@@ -89,7 +89,7 @@ export const experiences = [
     period: "Jul 2024 – Present",
     type: "Full-time",
     highlights: [
-      "Architected LLM-powered enterprise applications using LangChain & LangGraph with FastAPI microservices-driving INR 9+ Cr projected annual savings",
+      "Architected LLM-powered enterprise applications using LangChain & LangGraph with FastAPI microservices—driving INR 9+ Cr projected annual savings",
       "Built multi-tenant RAG platforms with hybrid semantic + Elasticsearch retrieval, containerized on Docker and deployed via Kubernetes with Jenkins CI/CD on GCP/Azure",
       "Conducted 100+ technical interviews for Data Science and Full-Stack roles; performed code reviews across production projects",
       "Presented AI projects to Mahindra Group CTO Mohit Kapoor and Mahindra AI CEO Bhuwan Lodha",
@@ -104,7 +104,7 @@ export const experiences = [
     period: "Jul 2023 – Jun 2024",
     type: "Trainee",
     highlights: [
-      "Built MIDI bank statement OCR pipeline for Mahindra Finance: ML-based extraction achieving 94% accuracy on text, 82% on scanned documents-processing 20K+ applications monthly",
+      "Built MIDI bank statement OCR pipeline for Mahindra Finance: ML-based extraction achieving 94% accuracy on text, 82% on scanned documents—processing 20K+ applications monthly",
       "Developed Sheet Metal Optimizer using 4 optimization algorithms (Bottom-Left, Heuristic Greedy, Minkowski NFP, Genetic Algorithm) for 2D irregular polygon bin packing",
       "Designed LLM Engine with FastAPI and Redis, enabling 12,000+ monthly self-service queries across 4 business units with 40-60% reduction in support resolution time",
     ],
@@ -116,7 +116,7 @@ export const experiences = [
     period: "May 2023 – Jul 2023",
     type: "Internship",
     highlights: [
-      "Authored MISRA C/C++ deviation analysis for safety-critical automotive code-achieved 10% reduction in compliance incidents",
+      "Authored MISRA C/C++ deviation analysis for safety-critical automotive code—achieved 10% reduction in compliance incidents",
       "Maintained PART & QAC 1.4 static analysis tools; shipped client-specific configuration updates",
     ],
   },
@@ -127,8 +127,8 @@ export const experiences = [
     period: "Jan 2023 – Dec 2023",
     type: "Part-time Internship",
     highlights: [
-      "Designed OCR + transliteration pipeline for Sharada Scripts (1200-year-old Kashmiri manuscript)-achieved 84% accuracy using deep learning and computer vision",
-      "Published Sanskrit NLP research at International Sanskrit Conference 2023-record-breaking 71.87% SOTA accuracy using BiLSTM-CNN sequence labeling",
+      "Designed OCR + transliteration pipeline for Sharada Scripts (1200-year-old Kashmiri manuscript)—achieved 84% accuracy using deep learning and computer vision",
+      "Published Sanskrit NLP research at International Sanskrit Conference 2023—record-breaking 71.87% SOTA accuracy using BiLSTM-CNN sequence labeling",
       "Presented to Department of Science & Technology, contributing to digital preservation of endangered languages",
     ],
   },
@@ -207,8 +207,23 @@ export const education = [
   {
     institution: "Reva University",
     degree: "B.Tech in Computer Science",
-    period: "Dec 2020 – Jun 2024",
+    period: "2020 – 2024",
     grade: "8.7 CGPA",
+    type: "university",
+  },
+  {
+    institution: "Kendriya Vidyalaya",
+    degree: "Secondary (Class VI - XII)",
+    period: "2012 – 2020",
+    grade: "XII - 90%",
+    type: "school",
+  },
+  {
+    institution: "The Air Force School, Subroto Park",
+    degree: "Primary & Middle School",
+    period: "2008 – 2012",
+    grade: "",
+    type: "school",
   },
 ];
 
