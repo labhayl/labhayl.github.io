@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, FileText, Code2 } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Code2 } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
 export default function Hero() {
@@ -89,7 +89,7 @@ export default function Hero() {
               GitHub
             </a>
             <a
-              href="#contact"
+              href={`mailto:${personalInfo.email}`}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
             >
               <Mail className="w-5 h-5" />

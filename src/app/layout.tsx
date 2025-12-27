@@ -3,19 +3,23 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Abhay Pratap Singh | Full-Stack AI Developer",
+  title: "Abhay Pratap Singh | Full-Stack AI Developer & ML Engineer",
   description:
-    "AI Developer specializing in LLM systems, RAG platforms, and production ML. Building scalable enterprise solutions at Mahindra AI.",
+    "AI/ML Engineer and Full-Stack Developer specializing in LLM systems, ML pipelines, RAG platforms, and production-grade applications. Building scalable AI solutions at Mahindra.",
   keywords: [
     "AI Developer",
+    "ML Engineer",
+    "Machine Learning Engineer",
+    "Data Scientist",
     "Full Stack Developer",
     "LLM",
-    "Machine Learning",
     "RAG",
     "LangChain",
     "Python",
     "React",
     "FastAPI",
+    "TensorFlow",
+    "PyTorch",
   ],
   authors: [{ name: "Abhay Pratap Singh" }],
   creator: "Abhay Pratap Singh",
@@ -23,16 +27,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://labhayl.github.io",
-    title: "Abhay Pratap Singh | Full-Stack AI Developer",
+    title: "Abhay Pratap Singh | Full-Stack AI Developer & ML Engineer",
     description:
-      "AI Developer specializing in LLM systems, RAG platforms, and production ML.",
+      "AI/ML Engineer and Full-Stack Developer specializing in LLM systems, ML pipelines, and production-grade applications.",
     siteName: "Abhay Pratap Singh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhay Pratap Singh | Full-Stack AI Developer",
+    title: "Abhay Pratap Singh | Full-Stack AI Developer & ML Engineer",
     description:
-      "AI Developer specializing in LLM systems, RAG platforms, and production ML.",
+      "AI/ML Engineer and Full-Stack Developer specializing in LLM systems, ML pipelines, and production-grade applications.",
   },
   robots: {
     index: true,

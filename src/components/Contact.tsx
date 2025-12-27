@@ -2,32 +2,21 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import {
   Mail,
   MapPin,
-  Send,
   Github,
   Linkedin,
   Code2,
   ExternalLink,
+  Send,
 } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const mailtoLink = `mailto:${personalInfo.email}?subject=Portfolio Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
-    window.location.href = mailtoLink;
-  };
 
   const socialLinks = [
     {
@@ -35,18 +24,21 @@ export default function Contact() {
       icon: Github,
       href: personalInfo.github,
       label: "@labhayl",
+      color: "hover:bg-zinc-800 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
       href: personalInfo.linkedin,
-      label: "Connect",
+      label: "Connect with me",
+      color: "hover:bg-blue-600 hover:text-white",
     },
     {
       name: "LeetCode",
       icon: Code2,
       href: personalInfo.leetcode,
       label: "Knight (Top 4.77%)",
+      color: "hover:bg-orange-500 hover:text-white",
     },
   ];
 
@@ -69,162 +61,91 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Let&apos;s <span className="gradient-text">connect</span>
           </h2>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Open to discussing AI/ML opportunities, technical collaborations, or
-            interesting projects
+          <p className="text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
+            Open to discussing AI/ML, Data Science, or Full-Stack opportunities. 
+            Let&apos;s build something impactful together.
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
+        <div className="max-w-3xl mx-auto">
+          {/* Main CTA Card */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="card p-8 md:p-12 text-center mb-8"
           >
-            <div className="card p-8">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-6">
-                Get in touch
-              </h3>
+            <div className="w-16 h-16 rounded-2xl bg-accent-500/10 flex items-center justify-center mx-auto mb-6">
+              <Mail className="w-8 h-8 text-accent-500" />
+            </div>
+            
+            <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">
+              Get in touch
+            </h3>
+            
+            <p className="text-zinc-600 dark:text-zinc-400 mb-8 max-w-md mx-auto">
+              Whether you have a project in mind, want to discuss opportunities, 
+              or just want to say hello—I&apos;d love to hear from you.
+            </p>
 
-              <div className="space-y-6 mb-8">
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="flex items-center gap-4 text-zinc-600 dark:text-zinc-400 hover:text-accent-500 transition-colors group"
-                >
-                  <div className="p-3 rounded-xl bg-accent-500/10 group-hover:bg-accent-500/20 transition-colors">
-                    <Mail className="w-5 h-5 text-accent-500" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-zinc-500">Email</p>
-                    <p className="font-medium text-zinc-900 dark:text-white">
-                      {personalInfo.email}
-                    </p>
-                  </div>
-                </a>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent-500 text-white font-medium hover:bg-accent-600 transition-all shadow-lg shadow-accent-500/25 hover:shadow-xl hover:shadow-accent-500/30 hover:-translate-y-0.5"
+            >
+              <Send className="w-5 h-5" />
+              <span>{personalInfo.email}</span>
+            </a>
 
-                <div className="flex items-center gap-4 text-zinc-600 dark:text-zinc-400">
-                  <div className="p-3 rounded-xl bg-accent-500/10">
-                    <MapPin className="w-5 h-5 text-accent-500" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-zinc-500">Location</p>
-                    <p className="font-medium text-zinc-900 dark:text-white">
-                      {personalInfo.location}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-t border-zinc-200 dark:border-zinc-700 pt-6">
-                <p className="text-sm text-zinc-500 mb-4">Find me on</p>
-                <div className="space-y-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-between p-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors group"
-                    >
-                      <div className="flex items-center gap-3">
-                        <social.icon className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-                        <span className="font-medium text-zinc-900 dark:text-white">
-                          {social.name}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-zinc-500">
-                        <span>{social.label}</span>
-                        <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
+            <div className="flex items-center justify-center gap-2 mt-6 text-sm text-zinc-500">
+              <MapPin className="w-4 h-4" />
+              <span>{personalInfo.location}</span>
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Social Links */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="grid sm:grid-cols-3 gap-4"
           >
-            <form onSubmit={handleSubmit} className="card p-8">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-6">
-                Send a message
-              </h3>
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                className={`card card-hover p-6 flex flex-col items-center text-center group transition-all ${social.color}`}
+              >
+                <social.icon className="w-8 h-8 mb-4 text-zinc-600 dark:text-zinc-400 group-hover:text-current transition-colors" />
+                <span className="font-semibold text-zinc-900 dark:text-white group-hover:text-current transition-colors">
+                  {social.name}
+                </span>
+                <span className="text-sm text-zinc-500 group-hover:text-current/80 transition-colors mt-1">
+                  {social.label}
+                </span>
+                <ExternalLink className="w-4 h-4 mt-3 opacity-0 group-hover:opacity-100 transition-opacity text-current" />
+              </motion.a>
+            ))}
+          </motion.div>
 
-              <div className="space-y-5">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-transparent focus:border-accent-500 focus:ring-1 focus:ring-accent-500 text-zinc-900 dark:text-white placeholder-zinc-500 transition-colors outline-none"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-transparent focus:border-accent-500 focus:ring-1 focus:ring-accent-500 text-zinc-900 dark:text-white placeholder-zinc-500 transition-colors outline-none"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-transparent focus:border-accent-500 focus:ring-1 focus:ring-accent-500 text-zinc-900 dark:text-white placeholder-zinc-500 transition-colors outline-none resize-none"
-                    placeholder="Tell me about your project or opportunity..."
-                    required
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-accent-500 text-white font-medium hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/25"
-                >
-                  <Send className="w-5 h-5" />
-                  Send Message
-                </button>
-              </div>
-            </form>
+          {/* Availability Status */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-12 text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-sm font-medium">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Available for new opportunities
+            </div>
           </motion.div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function Footer() {
               href="#"
               className="font-mono text-lg font-semibold text-accent-500"
             >
-              {"<AS />"}
+              {"<APS/>"}
             </a>
             <p className="text-sm text-zinc-500 flex items-center gap-1">
               © {currentYear} Built with <Heart className="w-3 h-3 text-red-500" /> by Abhay

@@ -40,7 +40,7 @@ export default function Navbar() {
               href="#"
               className="font-mono text-lg font-semibold text-accent-500 hover:text-accent-400 transition-colors"
             >
-              {"<AS />"}
+              {"<APS/>"}
             </a>
 
             {/* Desktop Navigation */}
