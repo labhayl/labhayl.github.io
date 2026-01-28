@@ -98,7 +98,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Software Engineer Trainee",
+    title: "AI Engineer Trainee",
     company: "Mahindra & Mahindra",
     location: "Bangalore, India",
     period: "Jul 2023 – Jun 2024",

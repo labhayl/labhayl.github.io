@@ -7,12 +7,14 @@ import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import InteractiveBackground from "@/components/InteractiveBackground";
 
 export default function Home() {
   return (
     <>
+      <InteractiveBackground />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <TechStack />

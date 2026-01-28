@@ -8,10 +8,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply antialiased;
   }
 
   body {
-    @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased;
+    @apply bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
@@ -26,19 +27,20 @@
   }
 
   .glass {
-    @apply bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800;
+    @apply bg-white/70 dark:bg-zinc-900/70 backdrop-blur-lg border border-white/20 dark:border-zinc-800/50 shadow-sm supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-zinc-900/60;
   }
 
   .card {
-    @apply bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl;
+    @apply bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl;
   }
 
+  /* ❌ removed `group` */
   .card-hover {
     @apply hover:border-accent-500/50 hover:shadow-lg hover:shadow-accent-500/10 transition-all duration-300;
   }
 
   .section-padding {
-    @apply py-20 md:py-32;
+    @apply py-24 md:py-32;
   }
 
   .container-custom {
@@ -50,22 +52,33 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, #8882 1px, transparent 1px),
+      linear-gradient(to bottom, #8882 1px, transparent 1px);
+    background-size: 24px 24px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 110%);
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-zinc-100 dark:bg-zinc-900;
+  @apply bg-transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-300 dark:bg-zinc-700 rounded-full;
+  @apply bg-zinc-300 dark:bg-zinc-800 rounded-full border-[3px] border-solid border-transparent bg-clip-content;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-zinc-400 dark:bg-zinc-600;
+  @apply bg-zinc-400 dark:bg-zinc-700;
 }
