@@ -27,7 +27,7 @@ export default function TechStack() {
             Tools & <span className="gradient-text">Technologies</span>
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Production-tested technologies I use to build scalable AI systems.
+            Production-tested technologies I use to build backend platforms, data pipelines, and AI infrastructure.
           </p>
         </motion.div>
 

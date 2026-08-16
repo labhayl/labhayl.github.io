@@ -8,9 +8,9 @@ import { about } from "@/lib/data";
 
 const stats = [
   { icon: Briefcase, value: "2+", label: "Years Experience" },
-  { icon: Zap, value: "₹9Cr+", label: "Business Impact" },
-  { icon: Users, value: "100+", label: "Interviews Conducted" },
-  { icon: Award, value: "Top 4.77%", label: "LeetCode Globally" },
+  { icon: Users, value: "1,200+", label: "Platform Users Served" },
+  { icon: Zap, value: "10K+", label: "Documents Processed Monthly" },
+  { icon: Award, value: "Rank 283", label: "LeetCode Biweekly" },
 ];
 
 export default function About() {
@@ -33,7 +33,7 @@ export default function About() {
             About Me
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-            Building AI that <span className="gradient-text">Scales</span>
+            Building Production Systems that <span className="gradient-text">Scale</span>
           </h2>
         </motion.div>
 

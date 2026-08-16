@@ -66,7 +66,7 @@ export default function Contact() {
             Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
-            Open to discussing AI/ML, Data Science, or Full-Stack opportunities.
+            Open to discussing Software Engineering, Backend/Platform, and AI Infrastructure opportunities.
             Let&apos;s build something impactful together.
           </p>
         </motion.div>

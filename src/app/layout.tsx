@@ -3,23 +3,22 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Abhay Pratap Singh | Full-Stack AI Developer & ML Engineer",
+  title: "Abhay Pratap Singh | Software Engineer — Backend, Platform & AI Infrastructure",
   description:
-    "AI/ML Engineer and Full-Stack Developer specializing in LLM systems, ML pipelines, RAG platforms, and production-grade applications. Building scalable AI solutions at Mahindra.",
+    "Software Engineer building production backend systems, data pipelines, and AI platforms. Go microservices, document ingestion, vector search, and multi-tenant RAG at Cisco and Mahindra.",
   keywords: [
-    "AI Developer",
-    "ML Engineer",
-    "Machine Learning Engineer",
-    "Data Scientist",
-    "Full Stack Developer",
-    "LLM",
+    "Software Engineer",
+    "Backend Engineer",
+    "Platform Engineer",
+    "AI Infrastructure",
+    "Distributed Systems",
+    "Go",
+    "gRPC",
+    "Python",
     "RAG",
     "LangChain",
-    "Python",
-    "React",
+    "Kubernetes",
     "FastAPI",
-    "TensorFlow",
-    "PyTorch",
   ],
   authors: [{ name: "Abhay Pratap Singh" }],
   creator: "Abhay Pratap Singh",
@@ -27,16 +26,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://labhayl.github.io",
-    title: "Abhay Pratap Singh | Full-Stack AI Developer & ML Engineer",
+    title: "Abhay Pratap Singh | Software Engineer — Backend, Platform & AI Infrastructure",
     description:
-      "AI/ML Engineer and Full-Stack Developer specializing in LLM systems, ML pipelines, and production-grade applications.",
+      "Software Engineer building production backend systems, data pipelines, and AI platforms for enterprise-scale retrieval and ingestion.",
     siteName: "Abhay Pratap Singh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhay Pratap Singh | Full-Stack AI Developer & ML Engineer",
+    title: "Abhay Pratap Singh | Software Engineer — Backend, Platform & AI Infrastructure",
     description:
-      "AI/ML Engineer and Full-Stack Developer specializing in LLM systems, ML pipelines, and production-grade applications.",
+      "Software Engineer building production backend systems, data pipelines, and AI platforms for enterprise-scale retrieval and ingestion.",
   },
   robots: {
     index: true,

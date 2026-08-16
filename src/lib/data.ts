@@ -9,28 +9,27 @@ import {
 
 export const personalInfo = {
   name: "Abhay Pratap Singh",
-  title: "Full-Stack AI Developer • Data Scientist • ML Engineer",
-  tagline: "Building production-grade LLM systems, ML pipelines, and scalable full-stack applications that drive real business impact",
+  title: "Software Engineer • Backend & Platform • AI Infrastructure",
+  tagline:
+    "Building production backend systems, data pipelines, and AI platforms that power enterprise-scale retrieval, ingestion, and inference at scale",
   email: "abhaypratapsingh722@gmail.com",
   phone: "+91 8660823189",
   location: "Bangalore, Karnataka, India",
   github: "https://github.com/labhayl",
   linkedin: "https://linkedin.com/in/abhay-pratap-singh",
   leetcode: "https://leetcode.com/labhayl",
-  hackerrank: "https://hackerrank.com/abhaypratapsingh",
 };
 
 export const about = {
-  summary: `Full-Stack AI Developer and AI/ML Engineer with 2+ years of experience building production LLM systems, ML pipelines, and enterprise-grade applications. 
-  At Mahindra AI, I architect end-to-end solutions—from data extraction and model development to deployment and scaling—delivering INR 9+ Cr in projected annual savings. 
-  I thrive at the intersection of Data Science, Machine Learning, and Software Engineering, turning complex data problems into shipped products that scale.`,
+  summary: `Software Engineer focused on backend platforms, distributed systems, and AI infrastructure. I build production data pipelines, retrieval systems, and microservices that power enterprise AI applications.
+  Currently at Cisco, working on document ingestion, vector search indexing, and Go backend services. Previously at Mahindra, I delivered multi-tenant LLM platforms, analytics tools, and copilots with measurable impact across 1,200+ users.`,
   highlights: [
-    "Led development of 4 production AI/ML applications at Mahindra Group",
-    "Built ML pipelines processing 20K+ documents monthly with 94% accuracy",
-    "Presented to C-suite executives including Group CTO and AI CEO",
-    "Conducted 100+ technical interviews for Data Science & Full-Stack roles",
+    "Developing Go microservices and ingestion pipelines for enterprise AI platforms at Cisco",
+    "Delivered multi-tenant RAG and LLM platforms with 35% latency and 28% cost improvements",
+    "Built analytics and copilot tools serving 1,200+ enterprise users",
+    "Developed OCR pipelines processing 10K+ documents/month at 94% accuracy",
     "Published NLP research achieving 71.87% SOTA accuracy",
-    "LeetCode Knight (Top 4.77% globally)",
+    "LeetCode Global Rank 283 (Biweekly Contest 98)",
   ],
 };
 
@@ -38,75 +37,89 @@ export const techStack = {
   languages: {
     title: "Languages",
     icon: Code2,
-    items: ["Python", "JavaScript", "Java", "TypeScript", "SQL", "Bash"],
+    items: ["Python", "Go", "JavaScript", "TypeScript", "Java", "SQL", "Bash"],
   },
-  aiml: {
-    title: "AI/ML & Data Science",
+  backend: {
+    title: "Backend & APIs",
+    icon: Server,
+    items: ["FastAPI", "Flask", "gRPC", "REST APIs", "Microservices", "Celery"],
+  },
+  dataAi: {
+    title: "Data & AI Platforms",
     icon: Cpu,
     items: [
       "LangChain",
       "LangGraph",
       "RAG",
-      "PyTorch",
-      "TensorFlow",
-      "Scikit-learn",
+      "Vector Search",
       "OpenAI API",
-      "Hugging Face",
-      "LlamaIndex",
-      "vLLM",
-      "Pandas",
-      "NumPy",
-      "Keras",
+      "Scrapy",
+      "Playwright",
+      "Temporal",
+    ],
+  },
+  distributed: {
+    title: "Distributed Systems",
+    icon: Cloud,
+    items: [
+      "Kubernetes",
+      "Redis",
+      "Kafka",
+      "Docker",
+      "Caching",
+      "Multi-Tenant Architectures",
     ],
   },
   frontend: {
     title: "Frontend",
     icon: Layout,
-    items: ["React.js", "Next.js", "Material UI", "Zustand", "Streamlit", "Plotly", "Tailwind CSS"],
-  },
-  backend: {
-    title: "Backend",
-    icon: Server,
-    items: ["FastAPI", "Flask", "Django", "REST APIs", "Celery", "Microservices", "Elasticsearch"],
+    items: ["React.js", "Next.js", "Plotly", "Tailwind CSS", "Streamlit"],
   },
   databases: {
-    title: "Databases",
+    title: "Cloud & Data Stores",
     icon: Database,
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Neo4j", "Pinecone", "SQLite"],
-  },
-  devops: {
-    title: "DevOps & Cloud",
-    icon: Cloud,
-    items: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "GCP", "Azure", "CI/CD", "MLOps"],
+    items: ["PostgreSQL", "Redis", "Elasticsearch", "AWS S3", "GCP", "Azure"],
   },
 };
 
 export const experiences = [
   {
-    title: "AI Developer",
-    company: "Mahindra & Mahindra",
+    title: "Software Engineer",
+    company: "Cisco",
     location: "Bangalore, India",
-    period: "Jul 2024 – Present",
+    period: "Jun 2026 – Present",
     type: "Full-time",
     highlights: [
-      "Architected LLM-powered enterprise applications using LangChain & LangGraph with FastAPI microservices—driving INR 9+ Cr projected annual savings",
-      "Built multi-tenant RAG platforms with hybrid semantic + Elasticsearch retrieval, containerized on Docker and deployed via Kubernetes with Jenkins CI/CD on GCP/Azure",
-      "Conducted 100+ technical interviews for Data Science and Full-Stack roles; performed code reviews across production projects",
-      "Presented AI projects to Mahindra Group CTO Mohit Kapoor and Mahindra AI CEO Bhuwan Lodha",
-      "Led SAST/DAST security scans and cloud cost optimization; identified critical vulnerabilities in enterprise apps",
-      "Mentored 9 interns (3 converted to full-time)",
+      "Develop Go backend microservices (gRPC, PostgreSQL, cloud object storage) with tenant-scoped APIs for enterprise AI assistant platforms",
+      "Engineer large-scale documentation ingestion and vector indexing pipelines that power RAG-based product assistants",
+      "Harden production ETL workflows against upstream schema drift, preventing single-source failures from blocking full ingestion runs",
+      "Refactor data pipeline architecture across 70+ ingestion modules, removing redundant abstractions and standardizing error handling",
     ],
   },
   {
-    title: "AI Engineer Trainee",
+    title: "Software Engineer (AI & Data Platforms)",
+    company: "Mahindra & Mahindra",
+    location: "Bangalore, India",
+    period: "Jul 2024 – Jun 2026",
+    type: "Full-time",
+    highlights: [
+      "Designed and led development of a multi-tenant AI platform powering enterprise LLM applications, achieving 35% latency reduction and 28% cost savings",
+      "Engineered scalable inference and retrieval systems with LangGraph orchestration, semantic search, vector indexing, and Redis-based caching",
+      "Created SmartBudget AI copilot reducing manual budget effort by 80% and improving optimization by 15%",
+      "Led MPlot analytics platform serving 1,200+ users with INR 6.23 Cr annual savings",
+      "Established observability and developer tooling; deployed platform services on Kubernetes across GCP and Azure",
+    ],
+  },
+  {
+    title: "Software Engineer Trainee",
     company: "Mahindra & Mahindra",
     location: "Bangalore, India",
     period: "Jul 2023 – Jun 2024",
     type: "Trainee",
     highlights: [
-      "Built MIDI bank statement OCR pipeline for Mahindra Finance: ML-based extraction achieving 94% accuracy on text, 82% on scanned documents—processing 20K+ applications monthly",
-      "Developed Sheet Metal Optimizer using 4 optimization algorithms (Bottom-Left, Heuristic Greedy, Minkowski NFP, Genetic Algorithm) for 2D irregular polygon bin packing",
-      "Designed LLM Engine with FastAPI and Redis, enabling 12,000+ monthly self-service queries across 4 business units with 40-60% reduction in support resolution time",
+      "Developed an OCR-based document processing pipeline handling 10K+ documents/month with 94% extraction accuracy",
+      "Designed LLM Engine with FastAPI and Redis, enabling 12,000+ monthly self-service queries across 4 business units",
+      "Built MIDI bank statement ML pipeline for finance workflows—94% accuracy on text extraction, 20K+ applications monthly",
     ],
   },
   {
@@ -116,8 +129,8 @@ export const experiences = [
     period: "May 2023 – Jul 2023",
     type: "Internship",
     highlights: [
-      "Authored MISRA C/C++ deviation analysis for safety-critical automotive code—achieved 10% reduction in compliance incidents",
-      "Maintained PART & QAC 1.4 static analysis tools; shipped client-specific configuration updates",
+      "Performed static analysis on safety-critical automotive software systems, improving compliance validation and debugging workflows",
+      "Authored MISRA C/C++ deviation analysis achieving 10% reduction in compliance incidents",
     ],
   },
   {
@@ -127,8 +140,8 @@ export const experiences = [
     period: "Jan 2023 – Dec 2023",
     type: "Part-time Internship",
     highlights: [
-      "Designed OCR + transliteration pipeline for Sharada Scripts (1200-year-old Kashmiri manuscript)—achieved 84% accuracy using deep learning and computer vision",
-      "Published Sanskrit NLP research at International Sanskrit Conference 2023—record-breaking 71.87% SOTA accuracy using BiLSTM-CNN sequence labeling",
+      "Designed OCR + transliteration pipeline for Sharada Scripts—achieved 84% accuracy using deep learning and computer vision",
+      "Published Sanskrit NLP research at International Sanskrit Conference 2023—71.87% SOTA accuracy using BiLSTM-CNN sequence labeling",
       "Presented to Department of Science & Technology, contributing to digital preservation of endangered languages",
     ],
   },
@@ -139,7 +152,7 @@ export const projects = [
     title: "SmartBudget AI",
     subtitle: "Enterprise Budget Copilot",
     description:
-      "RAG pipeline for historical budget retrieval with conversational forecasting capabilities. Enables project managers to query budgets naturally and generate accurate forecasts using LLMs.",
+      "RAG pipeline for historical budget retrieval with conversational forecasting. Enables project managers to query budgets naturally and generate accurate forecasts using LLMs.",
     tech: ["LangChain", "GPT-4", "Gemini", "FastAPI", "React", "PostgreSQL", "Redis"],
     impact: "Reduced PM effort by 80%, optimized project budgets by 15%",
     company: "Mahindra AI",
@@ -150,9 +163,9 @@ export const projects = [
     title: "LLM Engine",
     subtitle: "Multi-Tenant RAG Platform",
     description:
-      "FastAPI microservices architecture with Elasticsearch indexing, Redis FAQ caching, and Azure AD SSO integration. Serves semantic search across multiple business verticals.",
-    tech: ["FastAPI", "Elasticsearch", "Redis", "OpenAI API", "Azure AD", "Docker"],
-    impact: "12,000+ monthly queries, 40-60% reduction in support resolution time",
+      "Multi-tenant RAG platform with FastAPI microservices, Elasticsearch indexing, Redis caching, and tenant-scoped retrieval orchestration across business verticals.",
+    tech: ["FastAPI", "LangGraph", "Elasticsearch", "Redis", "OpenAI API", "Docker"],
+    impact: "12,000+ monthly queries, 40–60% reduction in support resolution time",
     company: "Mahindra AI",
     github: null,
     demo: null,
@@ -161,9 +174,9 @@ export const projects = [
     title: "MPlot",
     subtitle: "Vehicle Test Analytics Platform",
     description:
-      "Data visualization and automated PTO report generation for highly compressed vehicle test data. Adopted by 10+ engineering teams across 5 R&D divisions.",
+      "Data visualization and automated PTO report generation for highly compressed vehicle test datasets used in enterprise engineering workflows.",
     tech: ["Python", "Pandas", "Plotly", "FastAPI", "React"],
-    impact: "Estimated INR 5.93 Cr annual savings, 1000+ reports automated monthly",
+    impact: "1,200+ users, INR 6.23 Cr annual savings, 1,000+ reports automated monthly",
     company: "Mahindra AI",
     github: null,
     demo: null,
@@ -172,7 +185,7 @@ export const projects = [
     title: "MIDI",
     subtitle: "Bank Statement ML Pipeline",
     description:
-      "End-to-end ML pipeline for extracting and classifying transactional data from scanned bank statements. Supports 50+ formats with NLP-based extraction engine.",
+      "End-to-end ML pipeline for extracting and classifying transactional data from scanned bank statements. Supports 50+ formats with NLP-based extraction.",
     tech: ["Python", "OCR", "NLP", "Scikit-learn", "TensorFlow"],
     impact: "94% accuracy, 20K+ applications/month, 65% reduction in manual underwriting",
     company: "Mahindra Finance",
@@ -183,9 +196,9 @@ export const projects = [
     title: "TBMS",
     subtitle: "Test Bed Management System",
     description:
-      "Intelligent scheduling algorithm with constraint-based optimization for managing test bed allocations across 8 teams efficiently.",
+      "Constraint-based scheduling and optimization for managing test bed allocations across engineering teams.",
     tech: ["Python", "FastAPI", "React", "PostgreSQL"],
-    impact: "Realized INR 2.8 Cr savings on external testbed costs",
+    impact: "INR 2.8 Cr savings on external testbed costs",
     company: "Mahindra AI",
     github: null,
     demo: null,
@@ -234,9 +247,9 @@ export const certifications = [
     credential: "DP-100",
   },
   {
-    name: "Microsoft Azure AI Fundamentals",
-    issuer: "Microsoft",
-    credential: "AI-900",
+    name: "LeetCode Biweekly Contest 98",
+    issuer: "LeetCode",
+    credential: "Global Rank 283",
   },
   {
     name: "Google Data Analytics Specialization",
@@ -244,19 +257,9 @@ export const certifications = [
     credential: "Verified",
   },
   {
-    name: "IBM Data Science Specialization",
-    issuer: "IBM",
-    credential: "Verified",
-  },
-  {
-    name: "LeetCode Knight",
-    issuer: "LeetCode",
-    credential: "Rating 1889, Top 4.77%",
-  },
-  {
-    name: "MongoDB Python Developer Path",
-    issuer: "MongoDB",
-    credential: "Verified",
+    name: "Amazon ML Challenge",
+    issuer: "Amazon",
+    credential: "Global Rank 94 / 26,008",
   },
 ];
 
