@@ -84,7 +84,7 @@ export const techStack = {
 
 export const experiences = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer (AI Software and Platform)",
     company: "Cisco",
     location: "Bangalore, India",
     period: "Jun 2026 – Present",
